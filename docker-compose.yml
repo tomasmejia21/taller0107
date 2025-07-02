@@ -2,13 +2,10 @@ version: '3.8'
 
 services:
   app:
-    image: python:3.10 
+    build: ./app
     container_name: python-app
     ports:
       - "8000:8000"
-    command: sleep infinity
-    volumes:
-      - ./app:/app
     networks:
       - monitor-net
 
